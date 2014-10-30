@@ -2,17 +2,16 @@
   "name": "paper-focusable",
   "private": true,
   "dependencies": {
-    "polymer": "Polymer/polymer#>=0.4.0 <1.0.0"
+    "polymer": "Polymer/polymer#master"
   },
   "homepage": "https://github.com/Polymer/paper-focusable",
-  "version": "0.4.0",
-  "_release": "0.4.0",
+  "_release": "9e477e2f6b",
   "_resolution": {
-    "type": "version",
-    "tag": "0.4.0",
-    "commit": "24c176a6abd65df5cb41306a236520f0bacb1aa9"
+    "type": "branch",
+    "branch": "master",
+    "commit": "9e477e2f6b79d29cdc96b4fe1b2b0ca25bc921ec"
   },
   "_source": "git://github.com/Polymer/paper-focusable.git",
-  "_target": ">=0.4.0 <1.0.0",
+  "_target": "master",
   "_originalSource": "Polymer/paper-focusable"
 }

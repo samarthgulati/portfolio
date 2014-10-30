@@ -2,17 +2,16 @@
   "name": "core-collapse",
   "private": true,
   "dependencies": {
-    "polymer": "Polymer/polymer#>=0.4.0 <1.0.0"
+    "polymer": "Polymer/polymer#master"
   },
   "homepage": "https://github.com/Polymer/core-collapse",
-  "version": "0.4.0",
-  "_release": "0.4.0",
+  "_release": "cdeb303ef8",
   "_resolution": {
-    "type": "version",
-    "tag": "0.4.0",
-    "commit": "dae7a5292bad21245c7c7824ffcebe7c9011dbaa"
+    "type": "branch",
+    "branch": "master",
+    "commit": "cdeb303ef810e6f338b6d3978ab712fa054139d7"
   },
   "_source": "git://github.com/Polymer/core-collapse.git",
-  "_target": ">=0.3.0  <1.0.0",
+  "_target": "master",
   "_originalSource": "Polymer/core-collapse"
 }
