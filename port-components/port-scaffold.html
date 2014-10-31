@@ -1,0 +1,213 @@
+<html>
+
+<head>
+
+  <link rel="import" href="../components/polymer/polymer.html">
+  <link rel="import" href="../components/core-icon/core-icon.html">
+  <link rel="import" href="../components/core-scroll-header-panel/core-scroll-header-panel.html">
+  <link rel="import" href="../components/core-toolbar/core-toolbar.html">
+  <link rel="import" href="../components/core-icon-button/core-icon-button.html">
+  <link rel="import" href="../components/core-list/core-list.html">
+  <link rel="import" href="../components/core-drawer-panel/core-drawer-panel.html">
+  <link rel="import" href="../components/core-item/core-item.html">
+  <link rel="import" href="../components/paper-menu-button/paper-menu-button.html">
+  <link rel="import" href="port-card.html">
+
+  <style>
+    html,
+    body {
+      height: 100%;
+    }
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      color: #333;
+    }
+  </style>
+</head>
+
+<body unsresolved>
+  <polymer-element name="port-scaffold">
+    <template>
+      <style shim-shadowdom>
+        polyfill-unscoped-rule {
+          content: 'body';
+          margin: 0;
+          font-family: sans-serif;
+          color: #333;
+          height: 100%;
+        }
+        core-scroll-header-panel {
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+        }
+        /* background for toolbar when it is at its full size */
+
+        core-scroll-header-panel::shadow #headerBg {
+          background-image: url(https://fbcdn-sphotos-h-a.akamaihd.net/hphotos-ak-xfa1/v/t1.0-9/246453_4158965136110_475558258_n.jpg?oh=56f180a102aef17c6489679f577fdf82&oe=54B9669A&__gda__=1421285202_172df1c5c578e4fbb42f273116749a49);
+        }
+        /* background for toolbar when it is condensed */
+
+        core-scroll-header-panel::shadow #condensedHeaderBg {
+          background-color: #f4b400;
+        }
+        core-toolbar {
+          color: #f1f1f1;
+          fill: #f1f1f1;
+          background-color: transparent;
+        }
+        .title {
+          -webkit-transform-origin: 0;
+          transform-origin: 0;
+          font-size: 40px;
+        }
+        .content {
+          padding: 10px 30px;
+          background-color: #E7E7E7;
+        }
+        #hamburger {
+          display: none;
+        }
+        core-drawer-panel[narrow] #hamburger {
+          display: inline-block;
+        }
+        [drawer] {
+          background-color: #ffcb05 !important;
+        }
+        .main-label {
+          font-family: 'PT Sans Narrow', sans-serif;
+          font-weight: 700;
+          color: #444;
+          text-shadow: 3px 2px 0 #ffcb05, 4px 3px 0 #707070;
+          letter-spacing: 1px;
+          font-size: 2.5em;
+        }
+        #profile {
+          height: 1em;
+          border-radius: 1em;
+          margin-bottom: -.12em;
+        }
+      </style>
+      <core-drawer-panel id="drawerPanel" drawerwidth="260px">
+        <core-scroll-header-panel condenses main>
+          <core-toolbar class="tall">
+
+            <core-icon-button icon="menu" id="hamburger" onclick="document.querySelector('port-scaffold /deep/ core-drawer-panel').togglePanel();"></core-icon-button>
+            <div flex></div>
+            <core-icon-button icon="mail"></core-icon-button>
+            <div class="bottom indent title" id="title"><img id="profile" src="../images/profile.png" alt="">&nbsp;Samarth Gulati</div>
+
+          </core-toolbar>
+
+          <br>
+
+          <div class="content">
+            <div>
+              <port-card title="About" icon="public.svg"></port-card>
+              <div style="padding:1em; background-color:white">
+                <paper-shadow z='1'></paper-shadow>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia dolore at laboriosam libero in ipsum, eveniet perferendis tempore ratione sed ipsa, quibusdam vitae, quo asperiores quaerat sunt molestiae accusamus ex.</p>
+                <p>Enim voluptatem ab, dicta animi velit dolorum saepe nam, impedit ex ad hic, commodi perspiciatis aspernatur non. Mollitia inventore delectus nemo! Nostrum deserunt dolore provident iure, porro voluptatum corrupti suscipit.</p>
+              </div>
+
+              <br>
+            </div>
+
+            <div>
+              <port-card title="Experience" icon="work.svg"></port-card>
+              <div style="padding:1em; background-color:white">
+                <paper-shadow z='1'></paper-shadow>
+
+                <div horizontal layout justified>
+                  <h3 start>Company Name</h3>
+                  <i end self-center >Date</i></div>
+                <ul>
+                  <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At architecto distinctio esse quae exercitationem temporibus doloribus sapiente tempore, fuga, aliquid molestias totam libero ad ex voluptas dolores corrupti repellat id.</li>
+                  <li>Cumque recusandae a est nulla magni inventore reprehenderit reiciendis nostrum impedit amet accusantium, ipsa non dolore fugiat saepe vel sapiente culpa animi debitis consequuntur quia facere tempore? Quasi, autem, voluptas.</li>
+                </ul>
+                <hr>
+                <div horizontal layout justified>
+                  <h3 start>Company Name</h3>
+                  <i end self-center >Date</i></div>
+                <ul>
+                  <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At architecto distinctio esse quae exercitationem temporibus doloribus sapiente tempore, fuga, aliquid molestias totam libero ad ex voluptas dolores corrupti repellat id.</li>
+                  <li>Cumque recusandae a est nulla magni inventore reprehenderit reiciendis nostrum impedit amet accusantium, ipsa non dolore fugiat saepe vel sapiente culpa animi debitis consequuntur quia facere tempore? Quasi, autem, voluptas.</li>
+                </ul>
+              </div>
+            </div>
+
+            <br>
+
+
+            <div>
+              <port-card title="Skills" icon="flash-on.svg"></port-card>
+              <div style="padding:1em; background-color:white" horizontal layout justified>
+                <paper-shadow z='1'></paper-shadow>
+                <div self-justified>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate provident, accusantium deserunt reprehenderit illum fuga quaerat, necessitatibus ipsa ex ad quibusdam sit natus? Eveniet quibusdam incidunt voluptatum dolore voluptatibus vel.</div>
+                <div self-justified>Atque suscipit est libero, praesentium sed. Eos, eligendi harum dolor qui possimus sequi quo, sit, doloremque sunt adipisci dignissimos iste? Aperiam veniam assumenda, repellat, corporis aut cupiditate. Eius, sed temporibus.</div>
+                <div self-justified>Enim mollitia delectus error voluptate vero saepe eos, ducimus. Illo maiores voluptates placeat praesentium minus impedit, dolores vero suscipit nesciunt eius, officia corporis exercitationem amet culpa eaque porro velit odit.</div>
+              </div>
+            </div>
+
+            <br>
+
+
+            <div>
+              <port-card title="Projects" icon="public.svg"></port-card>
+              <div style="padding:1em; background-color:white">
+                <paper-shadow z='1'></paper-shadow>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia dolore at laboriosam libero in ipsum, eveniet perferendis tempore ratione sed ipsa, quibusdam vitae, quo asperiores quaerat sunt molestiae accusamus ex.</p>
+                <p>Enim voluptatem ab, dicta animi velit dolorum saepe nam, impedit ex ad hic, commodi perspiciatis aspernatur non. Mollitia inventore delectus nemo! Nostrum deserunt dolore provident iure, porro voluptatum corrupti suscipit.</p>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <port-card title="Contact" icon="public.svg"></port-card>
+            <div style="padding:1em; background-color:white">
+              <paper-shadow z='1'></paper-shadow>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia dolore at laboriosam libero in ipsum, eveniet perferendis tempore ratione sed ipsa, quibusdam vitae, quo asperiores quaerat sunt molestiae accusamus ex.</p>
+              <p>Enim voluptatem ab, dicta animi velit dolorum saepe nam, impedit ex ad hic, commodi perspiciatis aspernatur non. Mollitia inventore delectus nemo! Nostrum deserunt dolore provident iure, porro voluptatum corrupti suscipit.</p>
+            </div>
+          </div>
+        </div>
+
+        </core-scroll-header-panel>
+        <div drawer>
+
+          <core-toolbar class="medium-tall">
+            <div class="main-label">PORTFOLIO</div>
+          </core-toolbar>
+          <div>
+            <port-menu></port-menu>
+          </div>
+
+
+        </div>
+      </core-drawer-panel>
+    </template>
+    <script>
+      Polymer("port-scaffold", {
+
+
+        ready: function() {
+          // custom transformation: scale header's title
+          var titleStyle = this.$.title.style;
+
+          addEventListener('core-header-transform', function(e) {
+            var d = e.detail;
+            var m = d.height - d.condensedHeight;
+            var scale = Math.max(0.75, (m - d.y) / (m / 0.25) + 0.75);
+            titleStyle.transform = titleStyle.webkitTransform =
+              'scale(' + scale + ') translateZ(0)';
+          });
+        }
+      });
+    </script>
+  </polymer-element>
+</body>
+
+</html>
