@@ -2,16 +2,17 @@
   "name": "core-ajax",
   "private": true,
   "dependencies": {
-    "polymer": "Polymer/polymer#master"
+    "polymer": "Polymer/polymer#>=0.4.0 <1.0.0"
   },
   "homepage": "https://github.com/Polymer/core-ajax",
-  "_release": "fb941dbaf8",
+  "version": "0.4.0",
+  "_release": "0.4.0",
   "_resolution": {
-    "type": "branch",
-    "branch": "master",
-    "commit": "fb941dbaf82c7e268d1470464d3e79c65786e1f3"
+    "type": "version",
+    "tag": "0.4.0",
+    "commit": "3b2d12b4d14b0401b3c323bd2d68d025e833b6e0"
   },
   "_source": "git://github.com/Polymer/core-ajax.git",
-  "_target": "master",
+  "_target": "*",
   "_originalSource": "Polymer/core-ajax"
 }
